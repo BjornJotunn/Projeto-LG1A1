@@ -130,7 +130,7 @@ void cartao (void) {
 
 	inicio:
 	i=0;
-    //system("cls");
+	//system("cls");
 	printf("\nDigite o n%cmero do cart%co: ", 163, 198);
 	fflush(stdin); ncart[i] = getche();
 	while (ncart[i] != '\r')
@@ -145,12 +145,12 @@ void cartao (void) {
 	for (i=0; i<im; i++) {
 		Cart = fopen("CARTOES.dat", "a+b");
         if ((i>3) && (i<12)) {
-		    putchar('*');
-            fwrite(&ast, sizeof(ast), 1, Cart);
+			putchar('*');
+           	fwrite(&ast, sizeof(ast), 1, Cart);
         }
         else {
-            printf("%c", ncart[i]);
-            fwrite(&ncart[i], sizeof(ncart[i]), 1, Cart);
+           	printf("%c", ncart[i]);
+           	fwrite(&ncart[i], sizeof(ncart[i]), 1, Cart);
         }
 		fclose(Cart);
 	}
