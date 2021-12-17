@@ -142,6 +142,7 @@ void notafiscal (int im, float tot, int codped, int ifp) {
 			if (qtd[i] > 1)
 				fprintf(nota, "\n\t\t\t\t   R$ %5.2f", ped[i].custo*qtd[i]);
 		}
+		fprintf(nota, "\n\n\t\t Total: R$ %5.2f", tot);
 		fprintf(nota, "\n\n");
 
 		for (i=0; i<ifp; i++) {
