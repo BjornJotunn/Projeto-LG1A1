@@ -26,7 +26,7 @@ int main () {
     fclose(Pag);
     im = i;
     for (i=0; i<im; i++)
-        printf(" cod [%d] tipo [%s] val [%5.2f]\n", cped[i], formpag[i], valp[i]);
+        printf(" cod [%d] modo [%s] valor [%5.2f]\n", cped[i], formpag[i], valp[i]);
     getch();
     return 0;
 }
