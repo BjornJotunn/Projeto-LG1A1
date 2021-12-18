@@ -184,21 +184,21 @@ void cartao (int cped) {
 		ncart[++i] = getche();
 
 	im = i;
-    printf("\n");
+    	printf("\n");
 	if (im != 16) {
 		printf("Cart%co Inv%clido!", 198, 160);
 		goto inicio;
 	}
 	for (i=0; i<im; i++) {
 		Cart = fopen("CARTOES.dat", "a+b");
-        if ((i>3) && (i<12)) {
-		    putchar('*');
-            fwrite(&ast, sizeof(ast), 1, Cart);
-        }
-        else {
-            printf("%c", ncart[i]);
-            fwrite(&ncart[i], sizeof(ncart[i]), 1, Cart);
-        }
+        	if ((i>3) && (i<12)) {
+			putchar('*');
+            		fwrite(&ast, sizeof(ast), 1, Cart);
+        	}
+        	else {
+            		printf("%c", ncart[i]);
+            		fwrite(&ncart[i], sizeof(ncart[i]), 1, Cart);
+        	}
 		fclose(Cart);
 	}
 }
@@ -310,7 +310,7 @@ void fila (void) {
 						fil[j-1] = fil [j];
 					fim--;
 				}
-			}
+			} break;
 			case '0': admin(); break;
 			default : printf("\nOp%c%co inv%clida!", 135, 198, 160); getch(); break;
 		}
